@@ -16,6 +16,11 @@ const data = [
 ]
 
 const server = http.createServer((req, res) =>{
+    res.setHeader('Content-Type', 'application/json')
+    res.setHeader('content-language', 'en-US')
+    res.setHeader('Date',new Date(Date.now()))
+    res.setHeader('x-powered-by', 'node,js')
+
     res.end(
         JSON.stringify({
             data : data
